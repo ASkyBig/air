@@ -7,6 +7,8 @@
 
 - 代码片段：增加 `antd` 组件对应代码片段，输入组件名即可打出基础代码
 <img src="https://askybig.github.io/ImageStore/select.gif" width="800">
+此外，还可以添加一些通用片段：
+<img src="https://askybig.github.io/ImageStore/forbasic.gif" width="800">
 - ...
 
 ### TODO
