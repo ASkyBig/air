@@ -1,0 +1,53 @@
+{
+    "for循环": {
+        "prefix": "for",
+        "body": [
+            "for (const ${2:item} of ${1:array}) {",
+            "\t$3",
+            "}"
+        ],
+        "description": "for循环"
+    },
+    "for 普通循环": {
+        "prefix": "for",
+        "body": [
+            "for (let ${1:i} = 0; ${1: i} < ${2:arr}.lenght; ${1:i}++) {",
+            "  const ${3:item} = ${2:arr}[${1:i}]",
+            "}"
+        ]
+    },
+    "ajax": {
+        "prefix": "ajax",
+        "body": [
+            "$.ajax({",
+            "    url: '$1',",
+            "    method: '${2:POST}',",
+            "    datatype: 'json',",
+            "    success: data => {",
+            "        $3;",
+            "    },",
+            "    error: err => {",
+            "        $4;",
+            "    }",
+            "})"
+        ],
+        "description": "ajax模块"
+    },
+    "antd <Select>": {
+        "prefix": "select",
+        "body": [
+           "<Select",
+           "  defaultValue={$1}",
+           "  onChange={${2:handleChange}}",
+           ">",
+           "  {",
+           "    ${3:optionArr}.map(item => {",
+           "      return <Option value={item.value}>{item.label}</Option>",
+           "    })",
+           "  }",
+           "</Select>",
+           "$4"
+        ],
+        "description": "antd <Select>"
+    }
+}
