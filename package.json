@@ -6,6 +6,7 @@
 	"engines": {
 		"vscode": "^1.49.0"
 	},
+        "publisher": "947821965",
 	"categories": [
 		"Other"
 	],
