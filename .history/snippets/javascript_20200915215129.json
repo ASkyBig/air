@@ -54,7 +54,7 @@
       "prefix": "button",
       "body": [
         "<Button",
-        "  type={${1:primary}}",
+        "  type={${1: primary}}",
         "  onClick={${2:handleClick}}",
         ">",
         "  ${3:确定}",

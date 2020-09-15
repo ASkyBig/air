@@ -2,7 +2,7 @@
   "name": "air",
 	"displayName": "air",
 	"description": "antd in react",
-	"version": "0.0.2",
+	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.10.0"
 	},
@@ -37,7 +37,7 @@
 		"test": "node ./test/runTest.js"
 	},
 	"devDependencies": {
-        "@types/vscode": "^1.10.0",
+        "@types/vscode": "^1.49.0",
         "@types/glob": "^7.1.3",
         "@types/mocha": "^8.0.0",
         "@types/node": "^14.0.27",
