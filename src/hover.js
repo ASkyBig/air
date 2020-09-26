@@ -1,11 +1,6 @@
 const vscode = require('vscode');
-const path = require('path');
-const fs = require('fs');
 
 function provideHover (document, position) {
-    const fileName = document.fileName;
-    console.log('fileName ===', fileName );
-    const workDir = path.dirname(fileName);
     // position是个对象 position: { line:16, character: 6 }
     const word = document.getText(document.getWordRangeAtPosition(position));
     const labelArr = [
@@ -23,9 +18,9 @@ function provideHover (document, position) {
     if (labelArr.includes(word)) {
         const lowerCaseWord = word.toLowerCase();
         return new vscode.Hover(`
-                \n* **组件（4.x）**：[${word}](https://ant.design/components/${lowerCaseWord}-cn/#API)
-                \n* **组件（3.x）**：[${word}](https://3x.ant.design/components/${lowerCaseWord}-cn/#API)
-            `);
+            \n* **组件（4.x）**：[${word}](https://ant.design/components/${lowerCaseWord}-cn/#API)
+            \n* **组件（3.x）**：[${word}](https://3x.ant.design/components/${lowerCaseWord}-cn/#API)
+        `);
     }
 }
 

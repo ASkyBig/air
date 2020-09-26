@@ -77,5 +77,82 @@
             "$6"
         ],
         "description": "antd <Tabs>"
+    },
+    "antd <Tag>": {
+        "prefix": "tag",
+        "body": [
+            "<Tag closeable visible onClose={${1:callback}}>",
+            "  {${2:tagName}}",
+            "</Tag>",
+            "$3"
+        ],
+        "description": "antd <Tag>"
+    },
+    "antd <Input>": {
+        "prefix": "input",
+        "body": [
+            "<Input",
+            "  placeholder=\"${1:placeholder}\"",
+            "  value={${2:value}}",
+            "  onChange={${3:callback}}",
+            "/>",
+            "$4"
+        ],
+        "description": "antd <Input>"
+    },
+    "antd <Radio>": {
+        "prefix": "radio",
+        "body": [
+            "<Radio value={${1:value}}>",
+            "  {${2:label}}",
+            "</Radio>",
+            "$4"
+        ],
+        "description": "antd <Radio>"
+    },
+    "antd <RadioGroup>": {
+        "prefix": "radiogroup",
+        "body": [
+            "<Radio.Group",
+            "  disabled={${1:false}}",
+            "  onChange={${2:callback}}",
+            ">",
+            "  {",
+            "    ${3:optionArr}.map(item => {",
+            "      return <Radio value={${4:value}}>{${5:label}}</Radio>",
+            "    })",
+            "  }",
+            "</Radio.Group>",
+            "$6"
+        ],
+        "description": "antd <RadioGroup>"
+    },
+    "antd <Table>": {
+        "prefix": "table",
+        "body": [
+            "<Table",
+            "  dataSource={${1:dataList}}",
+            "  pagination={${2:false}}",
+            "  columns={${3:columns}}",
+            "/>",
+            "$4"
+        ],
+        "description": "antd <Table>"
+    },
+    "antd <Modal>": {
+        "prefix": "modal",
+        "body": [
+            "<Modal",
+            "  visible={${1:false}}",
+            "  width=\"${2:1000px\"}",
+            "  title=\"${3:title}\"",
+            "  onOk={${4:callback}}",
+            "  onCancel={${5:callback}}",
+            ">",
+            "{${6:content}}",
+            "</Modal>",
+            "$7"
+        ],
+        "description": "antd <Modal>"
     }
 }

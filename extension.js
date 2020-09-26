@@ -9,36 +9,39 @@ const vscode = require('vscode');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
+  require("./src/hover")(context);
 
-	require('./src/hover')(context);
-	// vscode.languages.registerHoverProvider('json', {
-	// 	provideHover(document, position, token) {
-	// 		return new vscode.Hover('json!!!!!!');
-	// 	}
-	// });
+  // vscode.languages.registerHoverProvider('json', {
+  // 	provideHover(document, position, token) {
+  // 		return new vscode.Hover('json!!!!!!');
+  // 	}
+  // });
 
-	// vscode.languages.registerHoverProvider('*', {
-	
-	// 	provideHover(document, position, token) {
-	// 		return new vscode.Hover('777!!!!!!');
-	// 	}
-	// });
+  // vscode.languages.registerHoverProvider('*', {
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "air" is now active!');
+  // 	provideHover(document, position, token) {
+  // 		return new vscode.Hover('777!!!!!!');
+  // 	}
+  // });
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with  registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('air.helloWorld', function () {
-		// The code you place here will be executed every time your command is executed
+  // Use the console to output diagnostic information (console.log) and errors (console.error)
+  // This line of code will only be executed once when your extension is activated
+  console.log('Congratulations, your extension "air" is now active!');
 
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from air!');
-	});
+  // The command has been defined in the package.json file
+  // Now provide the implementation of the command with  registerCommand
+  // The commandId parameter must match the command field in package.json
+  let disposable = vscode.commands.registerCommand(
+    "air.helloWorld",
+    function () {
+      // The code you place here will be executed every time your command is executed
 
-	context.subscriptions.push(disposable);
+      // Display a message box to the user
+      vscode.window.showInformationMessage("Hello World from air!");
+    }
+  );
+
+  context.subscriptions.push(disposable);
 }
 exports.activate = activate;
 

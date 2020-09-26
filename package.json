@@ -15,11 +15,21 @@
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"commands": [{
-            "command": "air.helloWorld",
-            "title": "Hello World"
-
-		}],
+		"commands": [
+			{
+				"command": "air.helloWorld",
+				"title": "Hello World"
+			},
+			{
+			"command": "console.with.prefix",
+			"title": "prefix.log"
+			}
+		],
+		 "keybindings": [{
+		 	"command": "console.with.prefix",
+		 	"key": "shift+ e",
+		 	"when": "editorTextFocus"
+		 }],
 		"snippets": [
 			{
 				"language": "javascript",
