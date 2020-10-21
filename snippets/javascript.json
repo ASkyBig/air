@@ -38,7 +38,7 @@
         "body": [
            "<Select",
            "  defaultValue={$1}",
-           "  onChange={${2:handleChange}}",
+           "  onChange={${2:value => {}}}",
            ">",
            "  {",
            "    ${3:optionArr}.map(item => {",
@@ -66,7 +66,7 @@
     "antd <Tabs>": {
         "prefix": "tabs",
         "body": [
-            "<Tabs defaultActiveKey={${1:key}} activeKey={${2:key}} onChange={${3:callback}}>",
+            "<Tabs defaultActiveKey={${1:key}} activeKey={${2:key}} onChange={${3:activeKey => {}}}>",
             "  <TabPane tab={${4:Tab 1}} key={${5:1}}>",
             "    Content of Tab Pane 1",
             "  </TabPane>",
@@ -81,7 +81,7 @@
     "antd <Tag>": {
         "prefix": "tag",
         "body": [
-            "<Tag closeable visible onClose={${1:callback}}>",
+            "<Tag closeable visible onClose={${1:e => {}}}>",
             "  {${2:tagName}}",
             "</Tag>",
             "$3"
@@ -154,5 +154,20 @@
             "$7"
         ],
         "description": "antd <Modal>"
+    },
+    "antd <Checkbox>": {
+        "prefix": "checkbox",
+        "body": [
+            "<Checkbox",
+            "  style={{ $1 }}",
+            "  key={${2: key}}",
+            "  checked={${3:false}}",
+            "  onChange={${4:e => e.target.value}}",
+            ">",
+            "{${5:label}}",
+            "</Checkbox",
+            "$6"
+        ],
+        "description": "antd <Checkbox>"
     }
 }

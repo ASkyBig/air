@@ -2,7 +2,7 @@
   "name": "air",
 	"displayName": "air",
 	"description": "antd in react",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.10.0"
 	},
