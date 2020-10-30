@@ -169,5 +169,34 @@
             "$6"
         ],
         "description": "antd <Checkbox>"
+    },
+    "antd <Search>": {
+        "prefix": "search",
+        "body": [
+            "<Search",
+            "  style={{ $1 }}",
+            "  ${2:enterButton}",
+            "  value={${3:value}}",
+            "  onChange={${4:e => e.target.value}}",
+            "  onSearch={${5:value => value}}",
+            "/>",
+            "$6"
+        ],
+        "description": "antd <Search>"
+    },
+    "antd <Datepicker>": {
+        "prefix": "Datepicker",
+        "body": [
+            "<Datepicker",
+            "  format={'${1:YYYY-MM-DD HH:mm:ss}'}",
+            "  disabled={${2:disabled}}",
+            "  disabledDate={${3:disabledDate}}",
+            "  showTime={{defaultValue: moment('00:00:00', 'HH:mm:ss') }}",
+            "  value={${4:value}}",
+            "  onChange={${5:value => value}}",
+            "/>",
+            "$6"
+        ],
+        "description": "antd <Datepicker>"
     }
 }

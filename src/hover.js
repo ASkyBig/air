@@ -7,7 +7,7 @@ function provideHover (document, position) {
         "Button", "Icon", "Typography", "Divider", "Grid", "Layout", "Space", 
         "Affix", "Breadcrumb", "Dropdown", "Menu", "PageHeader", "Pagination", 
         "Steps", "Autocomplete", "Cascader", "Checkbox", "DatePicker", "Form", 
-        "Input", "InputNumber", "Mentions", "Radio", "Rate", "Select", "Slider", 
+        "Input", "Search", "InputNumber", "Mentions", "Radio", "Rate", "Select", "Slider", 
         "Switch", "Timepicker", "Transfer", "TreeSelect", "Upload", "Avatar", 
         "Badge", "Calendar", "Card", "Carousel", "Comment", "Descriptions", "Empty", 
         "Image", "List", "Popover", "Statistic", "Table", "Tabs", "Tag", "Timeline", 
@@ -17,6 +17,21 @@ function provideHover (document, position) {
 
     if (labelArr.includes(word)) {
         const lowerCaseWord = word.toLowerCase();
+
+        if (lowerCaseWord === 'datepicker') {
+            return new vscode.Hover(`
+                \n* **组件（4.x）**：[${word}](https://ant.design/components/date-picker-cn/#共同的-API)
+                \n* **组件（3.x）**：[${word}](https://3x.ant.design/components/date-picker-cn/#共同的-API)
+            `);
+        }
+
+        if (lowerCaseWord === 'search') {
+            return new vscode.Hover(`
+                \n* **组件（4.x）**：[${word}](https://ant.design/components/input-cn/#Input.Search)
+                \n* **组件（3.x）**：[${word}](https://3x.ant.design/components/input-cn/#Input.Search)
+            `);
+        }
+        https://ant.design/components/input-cn/#Input.Search
         return new vscode.Hover(`
             \n* **组件（4.x）**：[${word}](https://ant.design/components/${lowerCaseWord}-cn/#API)
             \n* **组件（3.x）**：[${word}](https://3x.ant.design/components/${lowerCaseWord}-cn/#API)
